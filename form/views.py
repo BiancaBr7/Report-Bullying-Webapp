@@ -27,8 +27,7 @@ class FormView(FormView):
         category = form.cleaned_data.get("category")
         message = form.cleaned_data.get("message")
         language = form.cleaned_data.get("language")
-        #if language == "en":
-            #message = ts.translate_text(message)
+        message = ts.translate_text(message)
         school_name = form.cleaned_data.get("school_name")
         email = form.cleaned_data.get("email")
         cat_dict = {'racial':'Racial Discrimination', 'sexism': 'Sexism', 'lgbtq':'LGBTQ', 'bullying':'Bullying'}

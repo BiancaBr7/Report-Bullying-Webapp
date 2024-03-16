@@ -28,3 +28,9 @@ typing_extensions==4.10.0
 tzdata==2024.1
 urllib3==2.2.1
 django-js-asset==2.0.0
+PyTelegramBotAPI==3.6.7
+telebot==0.0.4
+translators==5.2.2
+numpy==1.22.4
+pyexecjs
+nodejs

@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-t@1r(s#cqs_(gexiotr@5t*hz%9^#pr9b@&!eo8!t&1a8f7cb0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -81,9 +81,9 @@ DATABASES = {
         'USER': 'postgres.shvsxrmzdoyolilvbuwa',
         'PASSWORD': '&79UEL.GAaJ-rUr',
         'HOST':'aws-0-ca-central-1.pooler.supabase.com',
-        'PORT': '5432',
+        'PORT': '6543',
     }
-}
+}   
 
 
 # Password validation

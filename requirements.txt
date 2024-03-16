@@ -31,3 +31,4 @@ django-js-asset==2.0.0
 PyTelegramBotAPI==3.6.7
 telebot==0.0.4
 numpy==1.22.4
+javascript

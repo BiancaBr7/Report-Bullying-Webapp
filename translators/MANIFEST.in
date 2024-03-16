@@ -1,0 +1,6 @@
+include *.md
+include *.txt
+include *.cfg
+include *.toml
+include LICENSE
+recursive-include translators *.py

@@ -1,0 +1,457 @@
+1.0.1
+build translate_api on 10,10,2017.
+
+...(history)
+
+2.2.2
+add `proxy`.
+
+2.4.0
+add `youdao`.
+
+2.4.2
+translate.google()
+
+2.4.4
+simple README.rst
+add github homepage
+
+3.0.0
+Due to incompatible code changes made in version 2.4.2, I should not upgrade the minor version number,
+but the major version number. This is a modification. Thanks for Sabrina's reminding.
+
+4.0.0
+`translate_api` --> 'translators'
+Implementing multiple translators is my pursuit, and the existing module name is ambiguous,
+so upgrading the module name is something I have been exploring and thinking about.
+Now the name `translators` is more in line with the meaning of the module itself,
+and now I have no hesitation to upgrade, although the code upgrade and optimization is limited.
+
+upgraded `Warning`.
+
+4.0.1
+fix "translators.google.cn"
+
+4.0.2
+On PYPI, rst --> md.
+
+4.0.4
+print --> raise,warn
+add 'zh-cn'
+del client=t
+
+4.0.6
+raise fixed
+add license in code
+
+4.0.8
+recover youdao()
+
+4.1.0
+add tencent()
+
+4.2.0
+add alibaba()
+use **kwargs
+proxy --> proxies
+make the license more formal
+
+4.2.2
+from_language default 'auto'
+
+4.3.0
+add baidu()
+
+4.3.2
+apis.py (Framing)
+
+4.4.0
+add bing()
+add sogou()
+
+4.4.2
+make 'get_language_url' of alibaba stronger.
+make xpath pattern of bing stronger.
+
+4.4.3
+fix youdao when from_language='auto' and youdao can not recognize which is language of query_text.
+
+4.5.0
+add deepl()
+add TranslatorError
+use magic `sleep_seconds`
+upgrade README.md
+
+4.5.4
+update README.md
+update License
+
+4.5.8
+add `using xxx service backend`
+update README.md with issues
+upgrade debug log
+
+4.5.14
+update README.md
+
+4.6.0
+update README.md
+translator & translate-api upgrade version synchronously.
+
+4.6.10
+make google('emoji') stronger.
+make requests of server region stronger.
+
+4.6.18
+make youdao('sentences length more than 50','errCode40') stronger.
+
+4.6.20
+make tencent(),deepl() stronger with language_map.
+make youdao() stronger with `action` and `lts`.
+speed request with `use_cache`.
+add type hints for function.
+`use_domain` --> `professional_field`
+
+4.7.0
+add yandex()
+`use_cache` deletes if_none(a,b), because b will be computed first, so fix if ... else ...
+update README.md
+
+
+4.7.1
+update README.md
+
+4.7.2
+make deepl() strong with `content-type` of request headers.
+
+4.7.3
+make output strong with '\n'.
+add translate_html().
+
+4.7.5
+upgrade translate_html().
+upgrade baidu() by advice of user @mozbugbox.
+reuse requests session by advice of user @mozbugbox.  #23
+
+4.7.6
+remove parameter `use_cache`, default cache language_map.
+cache `tkk` in google().
+fixed yandex() with `api_url`
+
+4.7.7
+make `get_language_map` with google stronger.
+
+4.7.8
+update README.md
+
+4.7.9
+make `get_tkk` with google stronger.
+
+4.7.11
+make deepl() stronger.
+
+4.7.12
+add google_v2().
+absolute import.
+
+4.7.13
+fix bugs by replacing execjs.get().eval(...) to json.loads(...) for google_v2
+
+4.7.14
+follow the provider to adjust the strategy for [baidu(), sogou(), youdao()].
+
+4.7.16
+make baidu() stronger with js_txt.
+
+4.7.20
+fix google() can’t get a complete language map, temporary, to be improved. #37 #42
+fix bing().
+fix deepl(). add language count from 11 to 24.
+fix default `sleep_seconds`. #39
+fix limit of `len(query_text)<5000`. #40
+add check_query_text().
+make `get_headers()` stronger.
+make `translate_html()` time complexity from O(n) to O(1), multiprocessing.
+
+4.8.0
+fix tencent().
+fix bing().
+fix google() can’t get a complete language map.
+delete temp_language_map
+fix `request_server_region_info`，can `input`.
+
+4.8.1
+fix `request_server_region_info`, https -> http, merge user `@dadas190`.
+
+4.9.1
+add caiyun().
+
+4.9.4
+fix `app.().js` changed.
+allow setting timeout. #47
+
+4.9.5
+fix deepl(). The job of fixing `get_language_map()` is user `@BingLingGroup`'s merged.
+
+4.10.0
+add argos().
+fix caiyun(), update to correct resolution of "getting a change in lang's network address causing content parsing errors".
+fix whitespace of output.
+
+4.11.0
+add iciba().
+add iflytek().
+fix caiyun() about `auto` error.
+
+4.11.1
+update README.md
+update deepl()
+
+4.11.3
+stronger google() about `consent.google.com`, merged from @mercuree. #57
+add param `reset_host_url` to google().
+
+4.11.4
+stronger iciba() about sensitive word.
+stronger baidu() and iflytek().
+
+5.0.0
+In order to avoid the troublesome phenomenon that '4.11.4' is less than '4.9.4', the smaller version number will be one in ten.
+fix yandex().
+fix google() about headers.
+fix iflytek() about regex of getting language_map and use warn method but raise error about `from_language=auto`.
+
+5.0.1
+stronger deepl() about `language_map`.
+update README.md
+
+5.0.2
+Continuous follow-up fixes based on service changes：baidu(), deepl(), iflytek().
+add more suitable python version.
+
+5.1.0
+add reverso().
+add itranslate().
+add translateCom() but from microsoft, like bing().
+change `assert` to `if not ...: raise ...`.
+ready to fix ifytek() about [geetest].
+
+5.1.1
+update readme.md
+
+5.2.1
+add papago().
+add utibet().
+pause iflytek() and wait for the fix.
+
+5.2.2
+fix multiprocessing.pool.close() of translate_html(). #67
+recover `query_text`='', return ''.
+add and fix input_limit.
+
+5.3.0
+rebuild baidu() and add 2 versions.
+rebuild iflytek() v2.
+fix youdao() about get_sign().  #74
+stronger google() about parsing data, especially one word own two result.  #69
+stronger multiprocessing, merged from @llabbasmkhll.  #71, #72
+
+5.3.1
+follow to change and recover iciba().
+stronger papago().
+
+5.4.0
+add lingvanex().
+add mglip().
+add niutrans().
+change baidu()'s default `version` to `v1`, and fix regexp bug.  #78
+
+# todo:
+add niutrans() but need to debug it.
+change baidu()'s default `version` to `v1`, need to debug `v2`.
+
+5.4.1
+upgrade readme.md
+
+5.4.2
+fix func request_server_region_info().
+
+5.4.3
+fix func en_tran().
+fix iflytek() about getting language_map.
+add self.default_country by os.environ, merged from @kevindragon  #79
+stronger papago().
+
+5.4.6
+upgrade packaging of project.
+upload package to Anaconda.  #90
+
+
+5.4.8
+stronger baidu().
+stronger caiyun().
+stronger deepl().  #83
+rebuild niutrans().
+stronger parsing data about splitting paragraph.
+
+5.5.0
+rebuild code structure.
+add func translate_text().
+stronger yandex().
+
+5.5.1
+add alibaba_v2().
+reuse and update session.
+rebuild func index tree.
+decorator(get_language_map)
+decorator(check_query)
+decorator(time_stat)
+
+5.5.3
+fix Tuple type < python 3.9  #99
+update readme.md with new parameters(function).
+stronger func time_stat().
+stronger func translate_html().
+
+5.5.4
+stronger func check_query().
+add youdao_v2(), youdao_v3().
+stronger google() about parsing data.  #100
+update readme.md
+
+5.5.5
+stronger func time_stat().
+stronger google() about parsing data.  #101
+
+5.5.6
+follow to change and recover bing().  #104
+follow to change and recover lingnavex().
+
+5.6.0
+tencent() --> qqFanyi().
+add qqTranSmart().
+add modernMT().
+add myMemory().
+add iflyrec().
+add volcEngine() but not completed.  #106
+follow to change and stronger baidu(), itranslate(), lingvanex().
+add func and parameter `update_session_after_freq`.
+stronger func get_server_region().
+change sleep_seconds from `random.random()` to default=0.
+update readme.md
+
+5.6.1
+add preaccelerate().
+stronger caiyun(), youdaoV1().
+update readme.md
+
+5.6.2
+stronger preaccelerate().
+update and change structure of readme.md
+
+5.6.3
+stronger preaccelerate() and add it to translate_text().
+
+5.7.0
+add sysTran()
+add apertium()
+add cloudYi()
+add tilde()
+add translateMe()
+add marai()  #119
+add yeekit()
+add languageWire()
+add elia()
+add judic()
+stronger preaccelerate()
+
+5.7.1
+python_requires='>=3.8'.
+add parameter `if_check_reset_host_url=True`.  #124
+fix parameter `input_limit` vs `limit_of_length`.
+add information of `professional_field`.
+stronger regex.
+stronger preaccelerate().
+
+5.7.2
+stronger languageWire().  #127
+add func uncertified().  #128
+check yeekit(), server is bad now.  #129
+update keywords of setup.py
+update readme.md
+
+5.7.5
+stronger uncertified().
+stronger debug_language_map().
+stronger parameter type.
+drop all eval().
+
+5.7.6
+stronger translateMe().
+stronger preaccelerate().
+add preaccelerate_and_speedtest().
+stronger debug_language_map().
+fix debug_language_map() with from_language=auto but translator doesn't support auto.
+
+5.7.7
+update license.
+update email.
+stronger parameter type.
+stronger sysTran().
+check translateMe(), server is bad now.
+
+5.7.8
+stronger myMemory() and add languages.  #132
+update readme.md
+
+5.7.9
+no change (only for updates of conda information)
+
+5.8.0
+add func get_languages()
+stronger code of `update_session_after_freq`.  #134
+stronger code of `update_session_after_seconds`.
+update readme.md
+
+5.8.2
+stronger reverso().  #135
+replace cloudYi() to cloudTranslation(), add v2.
+fix alibaba_v1.
+update readme.md
+
+5.8.3
+stronger caiyun().  #138
+stronger deepl().
+stronger debug_language_map().
+update niutransV2().
+update readme.md
+
+5.8.4
+stronger and fix translate_html().  #145
+set default parameter `if_ignore_empty_query=True`.
+set default parameter `n_jobs=1`.
+
+5.8.5
+stronger debug_language_map().  #144
+delete get_consent_cookie()(And this PR error has never been reproduced by the author).  #142
+update license.
+
+5.8.7
+stronger deepl().
+stronger bing().  #122
+stronger google().  #142, #144
+stronger get_server_region().  #110
+
+5.8.8
+stronger argos().
+stronger deepl().
+stronger lingvanex().
+
+5.8.9
+stronger and update get_server_region().  #147
+
+5.9.0
+add hujiang().
+stronger iciba().  #151
+add bias_of_length with func check_query_text().  #154
+

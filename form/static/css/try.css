@@ -1,0 +1,149 @@
+/* styles.css */
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#fff;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+    padding-top: 5%;
+    padding-left: 10%;
+    color: #0163ae;
+    line-height: 140%;
+    letter-spacing: 1px;
+    font-size: 40px;
+}
+form {
+    max-width: 80%;
+    width:100%;
+    margin-left: 10%;
+    margin-top: 3%;
+    padding: 0px;
+    text-align: left;
+}
+
+label {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0163ae;
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+input {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0163ae;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 18px;
+    background-color: #c8dcec;
+    border-width: 0px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+
+input:focus{
+    background-color: aliceblue;
+    outline: none;
+    border: 2px solid #0163ae;
+}
+
+textarea{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0163ae;
+    max-width : 100%;
+    min-width :100%;
+    font-size: 18px;
+    background-color: #c8dcec;
+    border-width: 0px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+    padding:10px;
+}
+
+textarea:focus{
+    background-color: aliceblue;
+    outline: none;
+    border: 2px solid #0163ae;
+}
+
+select{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0163ae;
+    width: 100%; /* Set a fixed width for the input fields (2/3 of the page) */
+    padding: 8px;
+    box-sizing: border-box;
+    font-size: 18px;
+    background-color: #c8dcec;
+    border-width: 0px;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+
+select:focus{
+    background-color: aliceblue;
+    border: 2px solid #0163ae;
+}
+
+select option {
+    background-color: #fff;
+    color: #333;
+}
+
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0163ae;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-bottom: 100px;
+    transition: .2s all ease-in-out;
+}
+
+button:hover{
+    background: inherit;
+    color: #0163ae;
+    border: 1px solid #0163ae;
+}
+
+.incorrect {
+    background-color: #ffcccc; /* Background color for the incorrect div */
+    padding: 10px; /* Adjust the padding as needed */
+    border: 1px solid #ff9999; /* Border color for the incorrect div */
+    color: #cc0000; /* Text color for the incorrect div */
+    margin-bottom: 16px; /* Adjust the margin as needed */
+}
+
+.messages {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+}
+
+.messages li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+
+.messages .error {
+    background-color: #f2dede;
+    color: #a94442;
+    border-color: #ebccd1;
+}

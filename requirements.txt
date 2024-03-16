@@ -92,7 +92,7 @@ pox==0.3.4
 ppft==1.7.6.8
 prompt-toolkit==3.0.38
 protobuf==4.25.1
-psycopg2==2.9.6
+psycopg2-binary==2.9.9
 pure-eval==0.2.2
 pyasn1==0.5.1
 pyasn1-modules==0.3.0

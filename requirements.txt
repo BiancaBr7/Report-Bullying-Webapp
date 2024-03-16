@@ -12,6 +12,7 @@ multiprocess==0.70.16
 pathos==0.3.2
 pox==0.3.4
 ppft==1.7.6.8
+psycopg2-binary==2.9.9
 pycparser==2.21
 PyExecJS==1.5.1
 requests==2.31.0

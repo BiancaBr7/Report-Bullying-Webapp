@@ -8,8 +8,10 @@ attrs==23.1.0
 backcall==0.2.0
 boto3==1.26.145
 botocore==1.29.145
+charset-normalizer==3.1.0
 colorama==0.4.6
 decorator==5.1.1
+dill==0.3.6
 Django==4.2.1
 django-ckeditor==6.6.1
 django-cors-headers==4.2.0
@@ -53,10 +55,15 @@ pytest-django==4.5.2
 python-dateutil==2.8.2
 pytz==2023.3
 s3transfer==0.6.1
+six==1.16.0
+sqlparse==0.4.4
 stack-data==0.6.2
 tomli==2.0.1
 tomlkit==0.11.8
 traitlets==5.9.0
+typing_extensions==4.8.0
+tzdata==2023.3
+urllib3==1.26.16
 wcwidth==0.2.6
 whitenoise==6.4.0
 wrapt==1.15.0
@@ -64,8 +71,10 @@ yarl==1.9.2
 certifi==2024.2.2
 cffi==1.16.0
 charset-normalizer==3.3.2
+colorama==0.4.6
 cryptography==42.0.5
 dill==0.3.8
+idna==3.6
 lxml==5.1.0
 multiprocess==0.70.16
 pathos==0.3.2
@@ -75,9 +84,6 @@ pycparser==2.21
 PyExecJS==1.5.1
 requests==2.31.0
 six==1.16.0
-sqlparse==0.4.4
 tqdm==4.66.2
 translators==5.9.0
-typing_extensions==4.10.0
-tzdata==2024.1
 urllib3==2.2.1

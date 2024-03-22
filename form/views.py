@@ -4,7 +4,10 @@ from django.urls import reverse_lazy
 from .forms import Form
 from django.core.mail import send_mail
 from django.conf import settings
-import translators as ts
+import deepl
+
+auth_key = "39bcd490-2c94-406c-bc0c-e01cf36657cb:fx"
+translator = deepl.Translator(auth_key)
 
 class FormView(FormView):
     template_name = 'form/form_form.html'
@@ -27,7 +30,7 @@ class FormView(FormView):
         category = form.cleaned_data.get("category")
         message = form.cleaned_data.get("message")
         language = form.cleaned_data.get("language")
-        message = ts.translate_text(message)
+        message = translator.translate_text(message, target_lang="EN-US")
         school_name = form.cleaned_data.get("school_name")
         email = form.cleaned_data.get("email")
         cat_dict = {'racial':'Racial Discrimination', 'sexism': 'Sexism', 'lgbtq':'LGBTQ', 'bullying':'Bullying'}

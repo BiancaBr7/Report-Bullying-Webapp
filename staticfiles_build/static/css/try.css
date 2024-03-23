@@ -151,16 +151,90 @@ button:hover{
 
 @media only screen and (max-width: 890px) {
 
-    h1{
-        margin-top: 10%;
-        font-size: 150%;
+    .title{
+        width : 85%;
+        margin-top:0%;
+    }
+
+    .header{
+        top:0;
+        left: 0;
+        width: 100%;
+        padding: 30px 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     
-    button {
-        width:100%;
-        margin:auto;
-        align-items: center;
-        margin-bottom: 20%;
+    
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 120px;
+        right:8%;
+        border-radius: 3px;
+        background-color: rgba(0,0,0,0.9);
+        width: 45%;
+        height: fit-content;
+        transition: 0.5s ease-in-out;
+    }
+
+    .navbar.show {
+        display: flex;
+        position: fixed;
+    }
+
+    .navbar a {
+        margin: 20px;
+        color: #fff;
+    }
+
+    .navbar a::before{
+        background:#fff;
+    }
+
+    .menu-toggle{
+        font-size: 20px;
+        display:block;
+        cursor:pointer;
+    }
+
+    .icon_container {
+        padding: 5%;
+        width: 30%;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .social-icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .social-icons a {
+        display: inline-block;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .social-icons img {
+        width: 30px;
+        height:30px;
+    }
+
+    .form{
+        max-width:90%;
+    }
+
+    .inputs {
+        flex-direction: column;
+    }
+
+    .name-input,
+    .email-input {
+        width: 100%;
     }
 
 }

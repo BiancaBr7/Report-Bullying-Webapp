@@ -10,6 +10,7 @@ class Form(models.Model):
     category = models.CharField(max_length=100,choices=[('racial', 'Racial Discrimination'), ('sexism', 'Sexism'), ('lgbtq', 'Lgbtq Discrimination'), ('bullying', 'Bullying')])
     language = models.CharField(max_length = 100, choices = [('en', 'English'), ('sp', 'Español'), ('ch_s', '中文简体'), ('ch_t','中文繁體'),('it', 'Italiano'), ('ar', 'عربي'), ('pu', 'ਪੰਜਾਬੀ'), ('fr', 'Français'), ('jp', '日本語'), ('kr', '한국인'), ('ger', 'Deutsch'),('ru', 'Русский'), ('po','Português')], default = 'English')
     message = models.TextField()
+    translated_message = models.TextField(null = True)
     
 
     def clean(self):

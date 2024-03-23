@@ -15,6 +15,7 @@ class FormView(FormView):
     success_url = reverse_lazy('form')
 
     def form_valid(self, form):
+
         # Create a "success" message
         form.save()
 
@@ -31,6 +32,7 @@ class FormView(FormView):
         message = form.cleaned_data.get("message")
         language = form.cleaned_data.get("language")
         message = translator.translate_text(message, target_lang="EN-US")
+
         school_name = form.cleaned_data.get("school_name")
         email = form.cleaned_data.get("email")
         cat_dict = {'racial':'Racial Discrimination', 'sexism': 'Sexism', 'lgbtq':'LGBTQ', 'bullying':'Bullying'}
@@ -43,6 +45,11 @@ class FormView(FormView):
             recipient_list = [school_email, email],
             auth_password = settings.EMAIL_HOST_PASSWORD,
         )
+
+        form_instance = form.save(commit=False)
+        form_instance.translated_message=message
+        print(form_instance.translated_message)
+        form_instance.save()
 
         # Continue with default behaviour
         return super().form_valid(form)

@@ -5,6 +5,7 @@ from .forms import Form
 from django.core.mail import send_mail
 from django.conf import settings
 import deepl
+from django.shortcuts import redirect
 
 auth_key = "39bcd490-2c94-406c-bc0c-e01cf36657cb:fx"
 translator = deepl.Translator(auth_key)
@@ -22,7 +23,7 @@ class FormView(FormView):
         messages.add_message(
             self.request,
             messages.SUCCESS,
-            'Thank you for filling in the form!'
+            'Thank you for filling in the form! Email sent successfully!'
         )
 
         #sending email
